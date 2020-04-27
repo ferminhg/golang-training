@@ -60,7 +60,7 @@ func ninja5() {
 	t = 42
 	fmt.Println(t)
 	fmt.Printf("%T\n", t)
-	
+
 	y5 = int(t)
 	fmt.Println(y5)
 	fmt.Printf("%T\n", y5)
