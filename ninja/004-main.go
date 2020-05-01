@@ -77,9 +77,9 @@ func main() {
 	}
 
 	// Exercise 9
-	mapNames[`fermin`] = []string{`wop`, `wop`, `wop`, }
+	mapNames[`fermin`] = []string{`wop`, `wop`, `wop`}
 	fmt.Println(mapNames)
-	
+
 	delete(mapNames, `fermin`)
 	fmt.Println(mapNames)
 }
