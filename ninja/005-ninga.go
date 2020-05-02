@@ -63,18 +63,18 @@ func main() {
 	fmt.Println("my sedan:", mySedan.doors, mySedan.color, mySedan.luxury)
 
 	mybike := struct {
-		color string
+		color       string
 		singleSpeed bool
 	}{
-		color: "red",
+		color:       "red",
 		singleSpeed: true,
 	}
 
 	fmt.Println(mybike)
 
 	netflixUser := struct {
-		name string
-		favSeries []string
+		name       string
+		favSeries  []string
 		viewSeries map[string]int
 	}{
 		name: "Fermin",
@@ -84,8 +84,8 @@ func main() {
 			"Game of Thrones",
 		},
 		viewSeries: map[string]int{
-			"Friends": 9,
-			"X-Files": 2,
+			"Friends":         9,
+			"X-Files":         2,
 			"Game of Thrones": 4,
 		},
 	}
