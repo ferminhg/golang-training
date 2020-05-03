@@ -123,7 +123,7 @@ func exec5() {
 	info(s)
 }
 
-func exec10(){
+func exec10() {
 	f := fooEnclouse()
 	fmt.Println(f())
 	fmt.Println(f())
@@ -136,10 +136,10 @@ func exec10(){
 	fmt.Println(f())
 }
 
-func fooEnclouse() func() int{
+func fooEnclouse() func() int {
 	x := 1
-	return func () int {
+	return func() int {
 		x += x
-		return x*x
+		return x * x
 	}
 }
