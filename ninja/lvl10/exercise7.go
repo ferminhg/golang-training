@@ -12,7 +12,8 @@ const primesPerRoutes = 100
 
 func main() {
 	ch := sender()
-	reciever(ch)
+	primes := reciever(ch)
+	fmt.Println(primes, len(primes))
 	fmt.Println("bye bye ✌️")
 }
 
@@ -40,10 +41,10 @@ func generatePrimes(wg *sync.WaitGroup, ch chan<- *big.Int) {
 	wg.Done()
 }
 
-func reciever(ch <-chan *big.Int) {
-	position := 0
+func reciever(ch <-chan *big.Int) []uint64{
+	var result []uint64
 	for prime := range ch {
-		fmt.Println(position, " -> ", prime)
-		position++
+		result = append(result, prime.Uint64())
 	}
+	return result
 }
